@@ -1,7 +1,6 @@
 <template>
   <div id="home" class="wrapper">
     <nav-bar class="home-nav"><div slot="center">购物街</div></nav-bar>
-   
     <scroll class="content" ref="scroll" :probe-type="3" @scroll="contentScroll" :pull-up-load="true" @pullingUp="loadMore"> 
       <home-swiper :banners="banners" @swiperImageLoad="swiperImageLoad"></home-swiper>
 
@@ -124,8 +123,8 @@ export default {
           this.currentType = 'sell'
           break
       }
-      this.$refs.tabControl1.currentIndex = index;
-      this.$refs.tabControl1.currentIndex = index;
+      // this.$refs.tabControl1.currentIndex = index;
+      this.$refs.tabControl2.currentIndex = index;
     },
 
     backClick(){
@@ -175,11 +174,11 @@ export default {
     height: 100vh;
     position: relative;
   }
-
-  #tabControl{
+/* 
+  .tab-control{
     position: relative;
     z-index: 9;
-  }
+  } */
 
   .home-nav{
     background-color: var(--color-tint);
